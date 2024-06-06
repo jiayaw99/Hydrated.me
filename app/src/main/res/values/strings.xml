@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Hydrated.me</string>
+    <string name="title_water">Drink</string>
+    <string name="title_history">History</string>
+    <string name="title_pet">Pet</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="register_link_to_signin">Already registered? Login Now!</string>
+    <string name="login">Login</string>
+    <string name="login_link_to_register">Not yet register? Be hydrated now</string>
+    <string name="title_activity_reset_password">ResetPassword</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_back"><![CDATA[<< Back]]></string>
+    <string name="menu_setting_title">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Account -->
+    <string name="account_header">Account</string>
+    <string name="preference_logout">preference_logout</string>
+    <string name="preference_email">preference_email</string>
+    <string name="preference_pet">preference_pet</string>
+    <string name="edit_email_title">Edit Email Address</string>
+    <string name="preference_reset_password">preference_reset_password</string>
+    <string name="wake_up_time">wake_up_time</string>
+    <string name="sleep_time">sleep_time</string>
+    <string name="cup_size">cup_size</string>
+
+    <!-- Main UI -->
+    <string name="placeholder_1_sentence">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="water_intake_target_text"><b>%d</b>/%d ml</string>
+    <string name="drink_record_recycle_view_water_icon_description">A cup of water</string>
+    <string name="volume">%d ml</string>
+    <string name="add_water_record">Add water record</string>
+    <string name="quick_add_water_record">Quick add water record</string>
+    <string name="today_s_intakes">Today intakes</string>
+    <string name="schedule_goal">schedule_goal</string>
+    <string name="add_water_intake_bottom_sheet_title">Add Water Intake</string>
+    <string name="_200">200</string>
+    <string name="volume_text">Volume</string>
+    <string name="ml">ml</string>
+    <string name="submit">Submit</string>
+    <string name="delete_drink_record_description">Delete this record</string>
+    <!-- Notification -->
+    <string name="action_notify_drink_water">com.jiuntian.hydratedme.broadcast.AlarmReceiver</string>
+    <string name="action_water_drinked">com.jiuntian.hydratedme.broadcast.DoneACupReceiver</string>
+    <string name="done_a_cup">DONE A CUP</string>
+    <string name="next_at_xx">Next at <b>%s</b></string>
+    <string name="optimize_goal">optimize_goal</string>
+    <string name="optimize">Optimize</string>
+    <string name="cancel">Cancel</string>
+    <string name="optimize_goal_dialog_message">Enter your body mass</string>
+    <string name="choose_pet_dialog_message">Choose your pet</string>
+    <string name="body_weight">Body Weight (kg)</string>
+    <string name="kg">Kg</string>
+    <string name="OK">OK</string>
+    <string name="pet">Pet</string>
+    <string name="leaderboard_button_description">View leaderboard</string>
+    <string name="sign_in_google_play">sign_in_google_play</string>
+    <string name="fix_reminder_notification">fix_reminder_notification</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="reset_intake_limit">reset_intake_limit</string>
+    <string name="email_required">You need to enter email address</string>
+    <string name="password_required">You need to enter your password</string>
+    <string name="drink">Drink section</string>
+    <string name="history">History section</string>
+    <string name="pet_fragment">Pet section</string>
+
+</resources>

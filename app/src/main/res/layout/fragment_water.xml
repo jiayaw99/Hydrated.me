@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.water.WaterFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--Hints-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+            <!--  Water Drop https://lottiefiles.com/37322-droplet -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/water_hint_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:lottie_url="https://assets4.lottiefiles.com/private_files/lf30_udcevp8v.json"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+            <TextView
+                android:id="@+id/water_hint_text"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/water_hint_round_corner_bg"
+                android:textColor="@color/water_hint_text"
+                android:text=""
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+        <!-- https://lottiefiles.com/7731-water-loading -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/water_droplet"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/water_progressbar"
+            app:lottie_autoPlay="true"
+            app:lottie_progress="0"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/water_intake_goals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"/>
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/quick_add_button"-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:contentDescription="@string/quick_add_water_record"-->
+<!--            android:src="@drawable/ic_quick_add_cup"-->
+<!--            app:tint="?attr/colorAccent" />-->
+        <RelativeLayout
+            android:id="@+id/quick_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_quick_add_cup"
+                app:tint="?attr/colorAccent"
+                android:contentDescription="@string/quick_add_water_record"/>
+
+            <TextView
+                android:id="@+id/volume_on_quick_add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:translationX="12.5dp"
+                android:translationY="30dp"
+                android:textColor="?attr/colorOnPrimary"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today_s_intakes"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageButton
+                android:id="@+id/add_drink_record_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/add_water_record"
+                android:src="@drawable/ic_add_24"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="4dp" />
+
+            <TextView
+                android:id="@+id/next_intake_at"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/drink_records_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="60dp"/>
+    </LinearLayout>
+</ScrollView>

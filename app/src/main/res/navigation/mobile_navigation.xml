@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_water">
+
+    <fragment
+        android:id="@+id/navigation_water"
+        android:name="com.jiuntian.hydratedme.ui.water.WaterFragment"
+        android:label="@string/title_water"
+        tools:layout="@layout/fragment_water" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.jiuntian.hydratedme.ui.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_pet"
+        android:name="com.jiuntian.hydratedme.ui.pet.PetFragment"
+        android:label="@string/title_pet"
+        tools:layout="@layout/fragment_pet" />
+</navigation>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".ui.pet.PetFragment">
+
+    <LinearLayout
+        android:id="@+id/pet_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HP "
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/healthBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="0.3"
+            android:progress="80"
+            android:progressTint="#E8FA0B0B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" EXP "
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/expBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_weight="0.3"
+            android:progress="25"
+            android:progressTint="#32E12B" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  LV "
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pet_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/leaderboard_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/pet_info"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_leaderboard"
+        android:contentDescription="@string/leaderboard_button_description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leaderboard_button"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:ignore="UselessLeaf">
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/pet_animation"
+            android:layout_width="350dp"
+            android:layout_height="450dp"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:contentDescription="@string/pet" />
+    </LinearLayout>
+</RelativeLayout>

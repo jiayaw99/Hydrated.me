@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_water"
+        android:icon="@drawable/ic_baseline_water_24"
+        android:title="@string/title_water"
+        android:contentDescription="@string/drink"/>
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/title_history"
+        android:contentDescription="@string/history"/>
+
+    <item
+        android:id="@+id/navigation_pet"
+        android:icon="@drawable/ic_baseline_pet_24"
+        android:title="@string/title_pet"
+        android:contentDescription="@string/pet_fragment"/>
+
+</menu>

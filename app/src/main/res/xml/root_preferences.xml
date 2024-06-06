@@ -1,0 +1,77 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Schedule">
+        <Preference
+            android:title="Fix Reminder Notification"
+            android:summary="Click if it doesn't come not on time. Select this application from list and allow us to run in background (no restriction) and autostart."
+            android:key="@string/fix_reminder_notification" />
+
+        <EditTextPreference
+            android:title="Goal"
+            android:key="@string/schedule_goal"
+            android:summary="Change your current water intake goal"
+            android:defaultValue="2200"
+            android:dialogTitle="Water Intake Goal"
+            android:dialogMessage="Change your current water intake goal"
+            />
+        <com.dr1009.app.chronodialogpreference.TimeDialogPreference
+            android:defaultValue="08:00"
+            android:title="Wake Up Time"
+            android:key="@string/wake_up_time"/>
+
+        <com.dr1009.app.chronodialogpreference.TimeDialogPreference
+            android:defaultValue="00:00"
+            android:title="Sleep Time"
+            android:key="@string/sleep_time"/>
+
+        <EditTextPreference
+            android:title="Cup Size"
+            android:key="@string/cup_size"
+            android:summary="Change your quick add cup size"
+            android:defaultValue="200"
+            android:dialogTitle="Cup size"
+            android:dialogMessage="Change your cup size. This will be use for water intake quick add."
+            />
+        <Preference
+            android:title="Optimize Goal"
+            android:key="@string/optimize_goal"
+            android:summary="Optimize goal based on body mass" />
+        <Preference
+            android:title="Reset Intake Limit"
+            android:key="@string/reset_intake_limit"
+            android:summary="Reset water intake limit per hour" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Pet">
+        <Preference
+            android:title="Pet"
+            android:key="@string/preference_pet"
+            android:summary=""
+            />
+        <Preference
+            android:title="Sign In Google Play"
+            android:key="@string/sign_in_google_play"
+            android:summary="Sign in to access leaderboard"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/account_header">
+        <EditTextPreference
+            android:title="Email"
+            android:key="@string/preference_email"
+            android:dialogTitle="@string/edit_email_title"
+            android:summary="" />
+
+        <Preference
+            android:title="Reset password"
+            android:key="@string/preference_reset_password"
+            android:summary="Change your current password."/>
+
+        <Preference
+            android:title="Logout"
+            android:key="@string/preference_logout"
+            android:summary="Log out current account."/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

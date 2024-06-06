@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jiuntian.hydratedme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:fullBackupOnly="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hydratedme">
+        <receiver
+            android:name=".broadcast.DoneACupReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name=".broadcast.DoneACupReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name=".broadcast.AlarmReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <!-- gms -->
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

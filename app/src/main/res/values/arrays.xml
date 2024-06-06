@@ -1,0 +1,17 @@
+<resources>
+    <string-array name="water_hints">
+        <item>Drink your glass of water slowly with some small sips</item>
+        <item>Hold the water in your mouth for a while before swallowing</item>
+        <item>Drinking water in a sitting posture is better than in a standing or running position</item>
+        <item>Do not drink cold water or water with ice</item>
+        <item>Do not drink water immediately after eating</item>
+        <item>Do not drink cold water immediately after hot drinks like tea or coffee</item>
+        <item>Always drink water before urinating and do not drink water immediately after urinating</item>
+    </string-array>
+
+    <string-array name="bar_chart_options">
+        <item>Daily</item>
+        <item>Week</item>
+        <item>Month</item>
+    </string-array>
+</resources>
